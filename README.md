@@ -7,7 +7,7 @@ Packages:
 - docker
 
 Config:
-- X Server configuration (to be improved)
+- X Server configuration (insecure! to be improved)
 
 Ubuntu instructions:
 ```console
@@ -29,5 +29,5 @@ foo@bar:~$ sudo docker run -it \
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --volume="/etc/localtime:/etc/localtime:ro" \
 --volume="/etc/timezone:/etc/timezone:ro" \
-rpn80/natcap.invest
+robertopaes/natcap.invest
 ```
