@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+  invest:
+    build:
+      context: .
+      args:
+        TZ: America/Sao_Paulo
+    image: natcap.invest
+    environment:
+      DISPLAY: unix${DISPLAY}
+      USERNAME: ${USER}
+    working_dir: /home/${USER}
+    volumes:
+      - /home/${USER}:/home/${USER}:rw
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/shadow:/etc/shadow:ro
+      - /etc/sudoers.d:/etc/sudoers.d:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
