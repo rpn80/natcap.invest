@@ -3,8 +3,6 @@ services:
   invest:
     build:
       context: .
-      args:
-        TZ: America/Sao_Paulo
     image: natcap.invest
     environment:
       DISPLAY: unix${DISPLAY}
@@ -17,3 +15,5 @@ services:
       - /etc/shadow:/etc/shadow:ro
       - /etc/sudoers.d:/etc/sudoers.d:ro
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /etc/localtime:/etc/localtime
+      - /etc/timezone:/etc/timezone
