@@ -17,7 +17,7 @@ foo@bar:~$ xhost +local:root
 
 # Start the application
 ```console
-foo@bar:~$ docker run -it \
+foo@bar:~$ sudo docker run -it \
 -e DISPLAY=unix$DISPLAY \
 -e USERNAME=$USER \
 --workdir="/home/$USER" \
